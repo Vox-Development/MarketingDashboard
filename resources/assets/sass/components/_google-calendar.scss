@@ -1,0 +1,34 @@
+.grid__tile--calender {
+    background-color: $white;
+    @include background-svg('/svg/calender.svg');
+
+    .google-calendar__title {
+        color: color($green, lighter);
+        opacity: 1;
+        font-size: setting($font-size, m);
+        text-transform: uppercase;
+    }
+
+    .google-calendar__events {
+        color: color($blue, light);
+        padding: 0 30px;
+        margin: 85px 0 0 0;
+        font-size: setting($font-size, s);
+    }
+
+    .google-calendar__event {
+        border-bottom: $count_green;
+        &:last-child {
+            opacity: .1;
+        }
+    }
+
+    .google-calendar__event__title {
+        @include font-sans-bold;
+        color: $count_green;
+    }
+
+    .google-calendar__event__date { 
+        color: rgba(52, 74, 15, 0.73)
+    }
+}

@@ -1,0 +1,23 @@
+.grid__tile--google-trends {
+    background: #ebebeb;
+    background-color: #ebebeb;
+    border-radius: 20px;
+}
+
+.google-trends {
+}
+
+.google-trends__title {
+    color: #111;
+    opacity: 1;
+    font-size: setting($font-size, m);
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    span {
+        font-weight: 200 !important;
+    }
+}
+
+.google-trends__content {
+    font-size: setting($font-size, s);
+}

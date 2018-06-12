@@ -1,0 +1,55 @@
+.grid__tile--pipedrive {
+    background: $border-color;
+    border-radius: $defn_size;
+
+    .pipedrive-statistics {
+        border: none;
+        @include clearfix;
+        @include mod(total) {
+            font-size: setting($font-size, m);
+        }
+        h1.heading {
+            color: $gray-color;
+            font-weight: 600;
+            text-align: center;
+            span {
+                font-weight: 200;
+            }
+        }
+        .pipedrive-graphic {
+            width: 100%;
+            padding: 4% 10%;
+        }
+    }
+
+    .pipedrive-statistics__period {
+        @include font-sans;
+
+        background: $count_green;
+        color: $gray-color;
+        border-radius: 500px 0 0 500px;
+        padding: 5px 10px;
+        display: block;
+        width: 70%;
+        top: .1em;
+        float: left;
+        border: 1px solid #fff;
+
+        font-size: setting($font-size, xs);
+        text-transform: uppercase;
+    }
+
+    $border_size:1;
+    .marketing_leads__count {
+        @include newsletter-count-color($count_purple, $border_size)
+    }
+    .deals_won__count {
+        @include newsletter-count-color($count_green, $border_size)
+    }
+    .deals_lost__count {
+        @include newsletter-count-color($count_orange, $border_size)
+    }
+    .days__count {
+       @include newsletter-count-color($count_gray, $border_size) 
+    }
+}

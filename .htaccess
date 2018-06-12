@@ -1,0 +1,6 @@
+<IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin *
+   Header set X-Content-Type-Options: "nosniff"
+   Header always unset X-Frame-Options
+   Header set X-XSS-Protection: "1; mode=block"
+</IfModule>

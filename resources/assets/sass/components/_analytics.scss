@@ -1,0 +1,70 @@
+.grid__tile--analytics {
+  @include background-svg('/svg/gmail-stats.svg');
+
+  .google-analytics__title {
+    color: color($gray, light);
+    opacity: 1;
+
+    font-size: setting($font-size, m);
+    text-transform: uppercase;
+
+    .days {
+      font-size: .65em;
+      display: block;
+      font-weight: 600;
+      color: $gray-color;
+    }
+  }
+
+  .days {
+    font-size: .65em;
+    display: block;
+    font-weight: 600;
+    color: $gray-color;
+  }
+
+  .google-analytics__events {
+    color: color($gray, light);
+
+    font-size: setting($font-size, s); //0.8em
+    padding: 54px 42px;
+    margin: 62px 0 0 0;
+  }
+
+  .google-analytics__event {
+    border-color: rgb(148, 201, 61) !important;
+    &:last-child {
+      opacity: .1;
+    }
+  }
+
+  .google-analytics__event__date {
+    color: $count_green;
+    font-size: 0.8em;
+  }
+
+  .google-analytics__event__title {
+    @include font-sans-bold;
+  }
+
+  h2.google-analytics__event__title {
+    font-size: .6em;
+    color: $gray-color;
+    font-weight: 200;
+  }
+
+  .total__views {
+    width: 70%;
+    display: block;
+    top: 15%;
+    left: 15%;
+    color: $gray-color;
+    font-size: .75em;
+
+    .view__number {
+      float: right;
+      color: $white;
+      font-size: 1.81em;
+    }
+  }
+}

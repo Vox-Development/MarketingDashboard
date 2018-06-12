@@ -1,0 +1,113 @@
+html {
+    @include antialiasing(pixel);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    //background-color: color($gray, darkest);
+
+    * {
+        box-sizing: border-box;
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        line-height: 1.2;
+
+        &:after,
+        &:before {
+            box-sizing: border-box;
+        }
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    @include font-sans-light;
+
+    margin-bottom: .5em;
+
+    color: $white;
+    opacity: .75;
+
+    font-size: setting($font-size, m);
+    text-transform: uppercase;
+}
+
+h2 {
+    @include font-sans-black;
+
+    color: $white;
+
+    font-size: setting($font-size, default);
+}
+
+li {
+    padding: .35vh 0;
+
+    border-bottom: solid .1vw color($blue, lightest, .2);
+}
+
+#drag-1, #drag-2 {
+  width: 25%;
+  height: 100%;
+  min-height: 6.5em;
+  margin: 10%;
+
+  background-color: #29e;
+  color: white;
+
+  border-radius: 0.75em;
+  padding: 4%;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+#drag-me::before {
+  content: "#" attr(id);
+  font-weight: bold;
+}
+
+.grid__tile--fa {
+  display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-navicon:after, .fa-reorder:after, .grid__tile--fa-bars:after {
+    content: "\f0c9";
+    color: #acacac !important;
+    position: absolute;
+    background: none !important;
+    bottom: 5px;
+    right: 5px;
+    font-size: small;
+    z-index: 999999999999;
+}
+
+.grid__tile--fa-sort-down:before, .grid__tile--fa-sort-desc:before {
+    content: "\f0dd";
+    color: #acacac;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: small;
+    z-index: 999999999999;
+    &:hover {
+      cursor: pointer !important;
+    }
+}
+
+// .fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+//     content: "\f0c9";
+// }
